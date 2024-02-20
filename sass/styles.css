@@ -118,6 +118,7 @@ body a {
 }
 .navbar-main-hover .navbar {
   background: url("/footages/world-map.png") no-repeat center right 262px;
+  background-size: auto;
 }
 .navbar-main-hover .navbar-nav {
   align-items: center;
@@ -1321,21 +1322,4 @@ body a {
 .footer .footer-footer .footer-footer-content p {
   font-size: 15px;
   color: #ffffff;
-}
-
-@media only screen and (max-width: 990px) {
-  .hot-topics-box {
-    height: 110px;
-  }
-}
-
-@media (min-width: 1300px) {
-  .container {
-    width: 1246px !important;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1156px;
-  }
 }/*# sourceMappingURL=styles.css.map */
