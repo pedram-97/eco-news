@@ -1320,6 +1320,12 @@ body a {
   color: #ffffff;
 }
 
+@media only screen and (max-width: 990px) {
+  .hot-topics-box {
+    height: 110px;
+  }
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1246px !important;
