@@ -1,0 +1,1345 @@
+* {
+  font-family: "BBC Nassim";
+}
+body {
+  img {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  background-color: $bg-white;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+//لاگین و باکس جستجو، ردیف اول
+.navbar-search {
+  background-color: $white-100;
+  ul {
+    white-space: nowrap;
+    a {
+      font-weight: 700;
+    }
+  }
+  :focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.navbar {
+  height: 35px;
+  background-color: $white-100 !important;
+  a {
+    color: $black-100;
+    font-size: 13px;
+    font-weight: bold;
+    height: 37px;
+  }
+  .calendar {
+    white-space: nowrap;
+    span {
+      font-family: "YekanWeb-Regular";
+      font-weight: 500;
+      margin-left: 5px;
+    }
+    .fa-clock {
+      font-size: 10px !important;
+    }
+  }
+  span {
+    font-size: 13px;
+    // margin-left: 5px;
+  }
+  ul {
+    border-right: 1px solid #b7b7b7;
+    padding-right: 1px;
+  }
+
+  li {
+    :hover {
+      background-color: #e8e8e8;
+    }
+  }
+  i {
+    font-size: 11px;
+    margin-left: 2px;
+  }
+  .btn-login {
+    color: $white-100;
+    background-color: $gray-100;
+    border-radius: 2px;
+    white-space: nowrap;
+    span {
+      margin: 0;
+    }
+    i {
+      margin: 0 2px !important;
+      size: 14px;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    font-size: 12px;
+    height: 28px;
+    width: 200px;
+    background-color: #e4e4e4;
+    border: none !important;
+  }
+
+  .magnifying-glass {
+    color: $red-100;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    z-index: 50;
+  }
+}
+
+// منو اصلی، ردیف دوم (هاور)
+.navbar-main-hover {
+  background-color: $main-red;
+  // height: 80px;
+  height: auto;
+  .navbar {
+    background-color: $main-red !important;
+    height: 80px;
+  }
+
+  .navbar {
+    background: url("/footages/world-map.png") no-repeat center right 262px;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    white-space: nowrap;
+    a,
+    i {
+      display: flex;
+      height: 80px;
+      align-items: center;
+      color: $white-100;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    :hover {
+      background-color: $red-200 !important;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3) inset;
+    }
+    i {
+      margin-right: 3px;
+      pointer-events: none;
+    }
+  }
+}
+
+// منو موضوعات، ردیف سوم
+.navbar-topics {
+  height: 36px;
+  background-color: $gray-200 !important;
+  .menu {
+    overflow: scroll;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    ul {
+      list-style: none !important;
+      max-width: 100% !important;
+      list-style: none;
+      width: 100%;
+      justify-content: space-between;
+      li {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        a {
+          height: 36px;
+          font-size: 16px;
+          font-weight: 400;
+          white-space: nowrap;
+          padding: 7px 5px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        a.tab-00:hover {
+          background-color: $bg-white !important;
+        }
+        a.tab-01:hover,
+        a.tab-03:hover,
+        a.tab-05:hover,
+        a.tab-07:hover,
+        a.tab-09:hover,
+        a.tab-11:hover,
+        a.tab-13:hover,
+        a.tab-15:hover {
+          background-color: #228b22 !important;
+        }
+        a.tab-02:hover,
+        a.tab-04:hover,
+        a.tab-06:hover,
+        a.tab-08:hover,
+        a.tab-10:hover,
+        a.tab-12:hover,
+        a.tab-14:hover,
+        a.tab-16:hover {
+          background-color: #1e90ff !important;
+        }
+      }
+      li::after {
+        width: 1px;
+        content: "";
+        display: inline-block;
+        border-left: 1px solid #b7b7b7;
+        height: 20px;
+        position: relative;
+      }
+      li:last-child:after {
+        content: "";
+        display: inline-block;
+        border-left: 0px solid #b7b7b7;
+      }
+    }
+  }
+  i {
+    color: $red-100;
+  }
+}
+
+// هیرو
+.row-one {
+  position: relative;
+  margin: 0 0 22px 0;
+}
+.hero {
+  margin-bottom: 16px;
+  .headlines {
+    padding-right: 8px;
+    margin: 2px 0 5px;
+    span {
+      color: $orange-100;
+      strong {
+        margin-left: 5px;
+      }
+    }
+    > a {
+      color: $gray-300;
+    }
+    :hover {
+      color: $red-hover !important;
+    }
+  }
+  .hero-banner {
+    border: 4px solid $white-100;
+  }
+  .topic {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 16px;
+    background-image: linear-gradient(#fff0, black);
+    h3 {
+      color: $white-100;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  .badge-custom {
+    border-radius: 0px;
+    background-color: $orange-100 !important;
+    color: #ffffff;
+    font-size: 13px;
+  }
+  .cards-section {
+    margin-top: 11px;
+    .card-group {
+    }
+    .card-box {
+      background-color: $white-100;
+      border: 1px solid $gray-200;
+      padding: 12px;
+      height: 100px;
+      box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
+
+      overflow: hidden;
+      :hover {
+        color: $red-hover;
+      }
+      .thumbnail {
+        margin-left: 8px;
+        img {
+          height: 75px;
+          object-fit: cover;
+        }
+      }
+      .thumbnail-title {
+        :hover {
+          color: $red-hover;
+        }
+        h3 {
+          color: $gray-300;
+          font-size: 15px !important;
+          font-weight: 500 !important;
+        }
+        h2 {
+          color: $black-300;
+          font-size: 16px !important;
+          font-weight: 700 !important;
+        }
+      }
+    }
+  }
+}
+
+// تازه‌های هر بخش خبری
+.latest-news {
+  .title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 2px 0 5px;
+    i {
+      margin-left: 7px;
+      color: $gray-500;
+    }
+    :hover {
+      color: $red-hover;
+    }
+    span {
+      .fix {
+        color: $pure-black !important;
+      }
+      color: $orange-100;
+      :hover {
+        display: none !important;
+      }
+    }
+  }
+  ul {
+    background-color: $white-100;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 34rem;
+    overflow: hidden;
+    border-top: 3px solid $orange-100;
+    border-bottom: 1px solid $gray-200;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+    height: 100%;
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid $gray-200;
+      line-height: 2.1;
+      &:last-child {
+        border: none;
+      }
+      &::before {
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f111";
+        font-size: 8px;
+        line-height: 1;
+        position: relative;
+        margin: 0 4px;
+        color: $orange-100;
+      }
+      a:hover {
+        color: $red-hover !important;
+      }
+    }
+  }
+  a {
+    font-size: 15px;
+    color: $pure-black !important;
+  }
+}
+
+// موضوعات داغ و تبلیغات
+.contact-for-adv {
+  margin: 2px 0 5px;
+  .title-and-icon {
+    i {
+      font-size: 15px;
+      margin-left: 7px;
+    }
+  }
+  a {
+    color: $gray-300;
+  }
+  .title-and-icon,
+  .phone-number {
+    :hover {
+      color: $red-hover !important;
+    }
+  }
+}
+.adv-and-hot-topics {
+  height: 100%;
+}
+
+.hot-topics {
+  .hot-topics-title {
+    margin: 15px 0 5px;
+    a {
+      color: $red-300 !important;
+      i {
+        margin-left: 7px;
+      }
+    }
+    a {
+      font-size: 15px;
+      color: rgb(15, 15, 15);
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    a:hover {
+      transform: translateX(-10px);
+    }
+  }
+  .hot-topics-box {
+    background-color: $white-100;
+    height: 100%;
+    border-top: 3px solid $gray-200;
+  }
+  ul {
+    align-content: baseline;
+    overflow: hidden;
+    font-size: 15px;
+    height: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li {
+      a {
+        color: $blue-100;
+      }
+      a:hover {
+        color: $red-hover !important;
+      }
+    }
+    li:after {
+      content: " | ";
+      color: $gray-400;
+    }
+    li:last-child:after {
+      content: "";
+    }
+  }
+}
+
+// سوئیچ اسلایدشو
+.slideshow-switch {
+  font-size: 19px;
+  font-weight: 900;
+  ul {
+    list-style: none;
+    li {
+      display: flex;
+      width: 160px;
+      align-content: center;
+      justify-content: center;
+      margin: 0 10px;
+      position: relative;
+      padding-top: 8px;
+      ::before {
+        content: "";
+        height: 6px;
+        width: 100%;
+        background-color: $gray-600;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    a {
+      color: $gray-400;
+    }
+    li,
+    a {
+      :hover {
+        color: $red-hover;
+      }
+    }
+  }
+}
+
+// جداول قیمتی
+.tables-row {
+  margin-bottom: 22px;
+}
+.chart-gold-coin,
+.chart-money {
+  .table {
+    background-color: red !important;
+    tr {
+      &:hover {
+        background-color: $table-hover;
+      }
+    }
+  }
+  .bg-primary {
+    th {
+      background-color: $bg-white;
+    }
+  }
+  th {
+    color: $gray-800;
+  }
+  .chart-title {
+    i {
+      margin-left: 5px;
+    }
+    .money-title,
+    .gold-title {
+      font-size: 15px;
+      color: rgb(15, 15, 15);
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .money-title:hover,
+    .gold-title:hover {
+      transform: translateX(-10px);
+    }
+    .more-info {
+      background-color: $white-200;
+      padding: 2px 10px 5px;
+      font-size: 10px;
+      color: $gray-500;
+      font-family: "YekanWeb-Regular";
+    }
+    .more-info:hover {
+      background-color: $gray-700 !important;
+      color: $white-100;
+    }
+  }
+  .tab-selector {
+    button {
+      width: 50%;
+      border-radius: 0px;
+      border: none;
+      color: $gray-900;
+      border-top: 3px solid $red-400;
+    }
+  }
+  .coin-tab,
+  .gold-tab {
+    box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.36), inset 0 0 8px 1px rgba(165, 164, 164, 0.5);
+  }
+  .variable-names {
+    padding: 7px 8px 7px 0;
+    a {
+      color: $gray-300;
+    }
+  }
+  .variable-prices {
+    padding: 7px 8px 7px 0;
+    font-size: 12px;
+    font-family: "YekanWeb-Regular";
+    color: $gray-300;
+  }
+  .price-chart {
+    padding: 7px 0 7px 2px;
+    display: flex;
+    justify-content: center;
+    i {
+      background-color: $white-100;
+      color: $red-hover;
+      border: 1px solid $gray-200;
+      padding: 2px 4px;
+    }
+  }
+  .tab-content {
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+  }
+  .nav-tabs {
+    .nav-link.active {
+      background-color: $bg-white !important;
+      color: $red-hover;
+      box-shadow: none !important;
+      border-top: 3px solid $red-500;
+    }
+
+    :hover {
+      border-color: #eee #eee #ddd !important;
+      background: #eee;
+      box-shadow: 0 0 15px #c0c0c0 inset !important;
+      border-top: 3px solid $red-hover !important;
+    }
+  }
+}
+
+// جدول مبدل واحد
+.convertor-box-group {
+  .convertor-box-title {
+    .convertor-title-icon {
+      font-size: 15px;
+      color: $black-300 !important;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .convertor-title-icon:hover {
+      transform: translateX(-10px);
+    }
+    a {
+      i {
+        margin-left: 7px !important;
+      }
+    }
+    .more-info {
+      color: $gray-500 !important;
+      font-size: 10px;
+      font-family: "YekanWeb-Regular";
+      background-color: $white-200;
+      padding: 1px 10px 3px;
+      :hover {
+        background-color: $gray-700 !important;
+      }
+      &:hover {
+        background-color: $gray-700 !important;
+        color: $white-100 !important;
+      }
+    }
+  }
+
+  :focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.convertor-group {
+  border-top: 3px solid $red-300;
+  .user-input {
+    border: none !important;
+    border-radius: 0px !important;
+    width: 100%;
+    text-align: center;
+    padding: 15px 16px;
+  }
+  .convertor-input {
+    width: 100%;
+  }
+  .origin,
+  .destination {
+    padding: 15px 4px;
+  }
+  .btn {
+    border-radius: 0px !important;
+    width: 100%;
+  }
+  select {
+    color: $pure-black !important;
+    border: none !important;
+    box-shadow: inset 0 0 6px #bbb !important;
+    background-color: $white-300 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  .result {
+    width: 100%;
+    text-align: center;
+    color: $white-100;
+    background-color: $black-100;
+    padding: 14px 10px;
+  }
+  .result-calculator {
+    background-color: $red-600 !important;
+    color: $white-100 !important;
+    padding: 15px 0px;
+  }
+}
+
+// کارت‌های باکس گفتگو و لینک به شبکه‌های اجتماعی
+.card-discussion {
+  margin-bottom: 10px;
+  .cards-title {
+    .card-icon {
+      font-size: 15px;
+      color: $gray-500 !important;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .card-icon:hover {
+      transform: translateX(-10px);
+    }
+    .more-info {
+      font-size: 10px;
+      font-family: "YekanWeb-Regular";
+      background-color: $white-200;
+      padding: 1px 10px 3px;
+      color: $gray-500;
+      &:hover {
+        background-color: $gray-700 !important;
+        color: $white-100;
+      }
+    }
+  }
+  .cards-bg {
+    background-color: $white-100;
+    border-top: 3px solid $orange-100;
+    padding: 12px;
+    box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
+    .discussion-thumbnail {
+      margin-left: 8px;
+      img {
+        height: 75px;
+        object-fit: cover;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .discussion-thumbnail-title {
+      h3 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        color: $gray-700;
+        &:hover {
+          color: $red-hover;
+          cursor: pointer;
+        }
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.34;
+        color: $pure-black;
+        &:hover {
+          color: $red-hover;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  i {
+    margin-left: 7px;
+  }
+}
+
+// باکس تبلیغات ردیف دوم، بعد از ردیف هیرو
+.adv-box-side {
+  margin-top: 25px;
+  .adv03-01,
+  .adv03-02,
+  .adv03-03,
+  .adv03-04 {
+    margin-bottom: 10px;
+  }
+}
+
+// .gold-box-group,
+// .money-box-group,
+// .convertor-box-group {
+//   height: 300px;
+// }
+
+// بردر تاپ و پدینگ سکشن‌ها
+.financial,
+.market,
+.sport-eco,
+.tourism {
+  .top-border {
+    height: 3px;
+    background-color: $purpule-100;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .content-col-li-thumbnail,
+  .content-col-li {
+    padding: 0 8px;
+  }
+}
+
+// استایل‌های سکشن پولی- مالی، بازار سرمایه، اقتصاد ورزش، توریسم و گردشگری
+.financial,
+.market,
+.sport-eco,
+.tourism {
+  .contents {
+    margin-bottom: 22px;
+  }
+  .menu {
+    .menu-items {
+      a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover {
+        transform: translateX(-10px);
+      }
+      .fa-align-justify {
+        margin-left: 8px;
+        color: $purpule-100;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .topic {
+        color: $purpule-100;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .fa-chevron-left {
+        margin: 0 7px;
+        font-size: 14px;
+        color: $purpule-100;
+      }
+      a {
+        color: $gray-300;
+      }
+      :hover {
+        color: $purpule-100 !important;
+      }
+      .menu-topics {
+        padding: 0 8px;
+      }
+      .fa-solid {
+        font-size: 15px !important;
+      }
+    }
+  }
+  .menu-and-icons {
+    .menu-icons {
+      .fa-rss,
+      .fa-gear {
+        padding: 6px 15px 6px 15px;
+        margin-right: 4px;
+        color: $gray-700;
+        background-color: $white-400;
+      }
+      .rss {
+        a {
+          :hover {
+            background-color: $orange-100;
+            color: $bg-white;
+          }
+        }
+      }
+      .gear {
+        a {
+          :hover {
+            background-color: $gray-300;
+            color: $bg-white;
+          }
+        }
+      }
+    }
+  }
+
+  .content-col-banner-right,
+  .content-col-banner-left {
+    .background {
+      background-color: $white-100;
+      height: 20rem;
+      overflow: hidden;
+
+      img {
+        transition: transform 0.5s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      p {
+        padding: 0 16px;
+      }
+    }
+    a {
+      font-size: 20px;
+      font-weight: 700;
+      color: $pure-black;
+      &:hover {
+        color: $purpule-100;
+      }
+    }
+  }
+
+  .content-col-li-thumbnail {
+    .background {
+      background-color: $white-100;
+      height: 100%;
+      padding: 0 10px;
+      margin-bottom: 0;
+    }
+    ul {
+      list-style: none;
+      li:last-child {
+        border-bottom: none !important;
+      }
+      li {
+        padding: 15px 0;
+        .title {
+          h2 {
+            color: $gray-500;
+          }
+          h3 {
+            color: $pure-black;
+            font-weight: 600;
+          }
+          h2,
+          h3 {
+            font-size: 16px;
+            &:hover {
+              color: $purpule-100;
+            }
+          }
+        }
+        border-bottom: 1px solid $gray-200;
+        .thumbnail {
+          align-content: center;
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+  }
+  .content-col-li ul li {
+    &:hover {
+      border-color: $purpule-100;
+    }
+  }
+
+  .content-col-li {
+    ul {
+      background-color: $white-100;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: 34rem;
+      overflow: hidden;
+      border-top: 3px solid $purpule-100;
+      border-bottom: 1px solid $gray-200;
+      border-left: 1px solid $gray-200;
+      border-right: 1px solid $gray-200;
+      height: 100%;
+      li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid $gray-200;
+        line-height: 2.1;
+        // padding: 0px 12px;
+        &:last-child {
+          border: none;
+        }
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $purpule-100;
+        }
+        a:hover {
+          color: $purpule-100 !important;
+        }
+      }
+    }
+    a {
+      font-size: 15px;
+      color: $pure-black !important;
+    }
+  }
+}
+
+// رنگ‌های مجزای هر ردیف
+
+// بازار سرمایه
+#row-market {
+  .top-border {
+    height: 3px;
+    background-color: $green-100;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .topic,
+  .fa-align-justify,
+  .fa-chevron-left {
+    color: $green-100 !important;
+  }
+  .menu-items {
+    a:hover {
+      color: $green-100 !important;
+    }
+  }
+  .content-col-banner-right,
+  .content-col-banner-left {
+    .background {
+      p:hover {
+        color: $green-100 !important;
+      }
+    }
+  }
+  .content-col-li-thumbnail {
+    .title {
+      h2,
+      h3 {
+        font-size: 16px;
+        &:hover {
+          color: $green-100 !important;
+        }
+      }
+    }
+  }
+  .content-col-li {
+    ul {
+      border-top: 3px solid $green-100 !important;
+      li {
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $green-100 !important;
+        }
+        a:hover {
+          color: $green-100 !important;
+        }
+      }
+    }
+  }
+
+  .content-col-li ul li {
+    &:hover {
+      border-color: $green-100 !important;
+    }
+  }
+  .topic {
+    :hover {
+      color: $green-100 !important;
+    }
+  }
+}
+
+// اقتصاد ورزشی
+#row-sport-eco {
+  .top-border {
+    height: 3px;
+    background-color: $pink-100;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .topic,
+  .fa-align-justify,
+  .fa-chevron-left {
+    color: $pink-100 !important;
+  }
+  .menu-items {
+    a:hover {
+      color: $pink-100 !important;
+    }
+  }
+  .content-col-banner-right,
+  .content-col-banner-left {
+    .background {
+      p:hover {
+        color: $pink-100 !important;
+      }
+    }
+  }
+  .content-col-li-thumbnail {
+    .title {
+      h2,
+      h3 {
+        font-size: 16px;
+        &:hover {
+          color: $pink-100 !important;
+        }
+      }
+    }
+  }
+  .content-col-li {
+    ul {
+      border-top: 3px solid $pink-100 !important;
+      li {
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $pink-100 !important;
+        }
+        a:hover {
+          color: $pink-100 !important;
+        }
+      }
+    }
+  }
+
+  .content-col-li ul li {
+    &:hover {
+      border-color: $pink-100 !important;
+    }
+  }
+  .topic {
+    :hover {
+      color: $pink-100 !important;
+    }
+  }
+}
+
+// توریسم و گردشگری
+#row-tourism {
+  .top-border {
+    height: 3px;
+    background-color: $blue-200;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .topic,
+  .fa-align-justify,
+  .fa-chevron-left {
+    color: $blue-200 !important;
+  }
+  .menu-items {
+    a:hover {
+      color: $blue-200 !important;
+    }
+  }
+  .content-col-banner-right,
+  .content-col-banner-left {
+    .background {
+      p:hover {
+        color: $blue-200 !important;
+      }
+    }
+  }
+  .content-col-li-thumbnail {
+    .title {
+      h2,
+      h3 {
+        font-size: 16px;
+        &:hover {
+          color: $blue-200 !important;
+        }
+      }
+    }
+  }
+  .content-col-li {
+    ul {
+      border-top: 3px solid $blue-200 !important;
+      li {
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $blue-200 !important;
+        }
+        a:hover {
+          color: $blue-200 !important;
+        }
+      }
+    }
+  }
+
+  .content-col-li ul li {
+    &:hover {
+      border-color: $blue-200 !important;
+    }
+  }
+  .topic {
+    :hover {
+      color: $blue-200 !important;
+    }
+  }
+}
+
+// استان‌ها
+#row-provinces {
+  .content-col-banner-left {
+    img {
+      height: 100%;
+    }
+  }
+}
+
+// نیامندی‌ها
+.requirements {
+  margin: 15px auto 22px auto;
+  .top-border {
+    height: 3px;
+    width: 100%;
+    background-color: $orange-100;
+    margin-bottom: 8px;
+  }
+  .menu {
+    .menu-items {
+      a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover {
+        transform: translateX(-10px);
+      }
+      .fa-align-justify {
+        margin-left: 8px;
+        color: $orange-100;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .topic {
+        color: $orange-100;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .fa-chevron-left {
+        margin: 0 7px;
+        font-size: 14px;
+        color: $orange-100;
+      }
+      a {
+        color: $gray-300;
+      }
+      :hover {
+        color: $orange-100 !important;
+      }
+      .menu-topics {
+        padding: 0 8px;
+      }
+      .fa-download {
+        font-size: 15px !important;
+        margin-left: 15px;
+        color: $orange-100;
+      }
+    }
+    .adv-submit {
+      background-color: $orange-100;
+      .rss {
+        a,
+        i {
+          color: $white-100;
+        }
+        i {
+          margin: 0 5px 0 0;
+        }
+        a {
+          margin: 0 5px;
+        }
+        &:hover {
+          background-color: $gray-500;
+        }
+      }
+    }
+  }
+  .content-banner {
+    .background {
+      position: relative;
+      border: 4px solid $white-100;
+      overflow: hidden;
+      img {
+        aspect-ratio: 16/9;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      color: $white-100;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(#fff0, black);
+      padding: 8px 16px;
+    }
+  }
+}
+
+// فوتر
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  .footer-search {
+  }
+  span {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 60px !important;
+    font-weight: 900;
+  }
+  ul {
+    list-style: none;
+    line-height: 1.5rem;
+  }
+  .social {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    a {
+      // margin: 0;
+      padding: 10px;
+    }
+    ul {
+      display: flex;
+      li {
+        font-size: 20px;
+        i {
+          background-color: #00abff;
+          padding: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .footer-list {
+    padding: 0 5rem;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  a {
+    color: white;
+  }
+
+  .footer-footer {
+    background-color: $pure-black;
+    .footer-footer-content {
+      display: flex;
+      align-items: center;
+      img {
+        display: inline-block;
+        height: 45px;
+        margin-left: 14px;
+      }
+      p {
+        font-size: 15px;
+        color: $white-100;
+      }
+    }
+  }
+}
+
+//Media Queries
+// .hot-topics-box {
+//   @media only screen and (max-width: 990px) {
+//     height: 110px;
+//   }
+// }
