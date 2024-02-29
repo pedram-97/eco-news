@@ -23,6 +23,7 @@ body {
   background-color: $white-100;
   ul {
     white-space: nowrap;
+    margin-left: 10px;
     a {
       font-weight: 700;
     }
@@ -31,10 +32,13 @@ body {
     outline: none;
     box-shadow: none;
   }
+  i {
+    font-size: 10px !important;
+  }
 }
 
 .navbar {
-  height: 35px;
+  // height: 37px;
   background-color: $white-100 !important;
   a {
     color: $black-100;
@@ -106,15 +110,12 @@ body {
 // منو اصلی، ردیف دوم (هاور)
 .navbar-main-hover {
   background-color: $main-red;
-  // height: 80px;
+  background: url("/footages/world-map.png") no-repeat center right 430px;
+  background-color: $red-hover;
   height: auto;
   .navbar {
-    background-color: $main-red !important;
+    background-color: #b000 !important;
     height: 80px;
-  }
-
-  .navbar {
-    background: url("/footages/world-map.png") no-repeat center right 262px;
   }
 
   .navbar-nav {
@@ -238,6 +239,12 @@ body {
   }
   .hero-banner {
     border: 4px solid $white-100;
+    a {
+      img {
+        height: 365px;
+        object-fit: cover;
+      }
+    }
   }
   .topic {
     bottom: 0;
@@ -260,19 +267,20 @@ body {
   }
   .cards-section {
     margin-top: 11px;
-    .card-group {
-    }
     .card-box {
       background-color: $white-100;
       border: 1px solid $gray-200;
       padding: 12px;
       height: 100px;
-      box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
-
+      // box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
       overflow: hidden;
-      :hover {
-        color: $red-hover;
+      &:hover {
+        h2,
+        h3 {
+          color: $red-hover !important;
+        }
       }
+
       .thumbnail {
         margin-left: 8px;
         img {
@@ -281,9 +289,7 @@ body {
         }
       }
       .thumbnail-title {
-        :hover {
-          color: $red-hover;
-        }
+        overflow: scroll;
         h3 {
           color: $gray-300;
           font-size: 15px !important;
@@ -309,9 +315,7 @@ body {
       margin-left: 7px;
       color: $gray-500;
     }
-    :hover {
-      color: $red-hover;
-    }
+
     span {
       .fix {
         color: $pure-black !important;
@@ -319,6 +323,12 @@ body {
       color: $orange-100;
       :hover {
         display: none !important;
+      }
+    }
+    a i,
+    span {
+      &:hover {
+        color: $red-hover;
       }
     }
   }
@@ -339,22 +349,25 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
       border-bottom: 1px solid $gray-200;
-      line-height: 2.1;
+      padding: 4px 0 5px 0;
       &:last-child {
         border: none;
       }
-      &::before {
-        font-family: FontAwesome;
-        display: inline-block;
-        content: "\f111";
-        font-size: 8px;
-        line-height: 1;
-        position: relative;
-        margin: 0 4px;
-        color: $orange-100;
-      }
       a:hover {
         color: $red-hover !important;
+      }
+      a {
+        display: block;
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $orange-100;
+        }
       }
     }
   }
@@ -367,6 +380,7 @@ body {
 // موضوعات داغ و تبلیغات
 .contact-for-adv {
   margin: 2px 0 5px;
+  white-space: nowrap;
   .title-and-icon {
     i {
       font-size: 15px;
@@ -389,7 +403,7 @@ body {
 
 .hot-topics {
   .hot-topics-title {
-    margin: 15px 0 5px;
+    margin: 9px 0 3px;
     a {
       color: $red-300 !important;
       i {
@@ -442,6 +456,7 @@ body {
 .slideshow-switch {
   font-size: 19px;
   font-weight: 900;
+  overflow: scroll;
   ul {
     list-style: none;
     li {
@@ -464,24 +479,50 @@ body {
     }
     a {
       color: $gray-400;
-    }
-    li,
-    a {
-      :hover {
-        color: $red-hover;
+      &:hover {
+        color: $blue-200 !important;
+        // background-color: green;
       }
     }
+  }
+  a:hover:before {
+    background-color: $blue-200 !important;
   }
 }
 
 // جداول قیمتی
+td[data-table-var="name"] {
+  // background-color: lightblue;
+  ::before {
+    // content: "";
+    // margin-left: 5px;
+    // position: relative;
+    // bottom: -2px;
+    // background-position-x: 0%;
+    // background-position-y: 0%;
+    // display: inline-block;
+    // width: 16px;
+    // height: 11px;
+  }
+  .fi {
+    margin-left: 5px;
+    font-size: 15px;
+  }
+}
 .tables-row {
   margin-bottom: 22px;
 }
 .chart-gold-coin,
 .chart-money {
   .table {
-    background-color: red !important;
+    td {
+      // background-color: transparent !important;
+      tr {
+        &:hover {
+          background-color: $table-hover !important;
+        }
+      }
+    }
     tr {
       &:hover {
         background-color: $table-hover;
@@ -539,6 +580,7 @@ body {
   }
   .variable-names {
     padding: 7px 8px 7px 0;
+    white-space: nowrap;
     a {
       color: $gray-300;
     }
@@ -578,6 +620,17 @@ body {
       box-shadow: 0 0 15px #c0c0c0 inset !important;
       border-top: 3px solid $red-hover !important;
     }
+  }
+}
+
+// جدول چهارگانه، برای سایز مدیوم و کوچکتر از آن
+.tab-selector-2 {
+  button {
+    width: 25%;
+    border-radius: 0px !important;
+    border: none;
+    color: $gray-900;
+    border-top: 3px solid $red-400;
   }
 }
 
@@ -622,6 +675,9 @@ body {
 }
 .convertor-group {
   border-top: 3px solid $red-300;
+  .variable-buttons {
+    width: 100%;
+  }
   .user-input {
     border: none !important;
     border-radius: 0px !important;
@@ -690,7 +746,13 @@ body {
     background-color: $white-100;
     border-top: 3px solid $orange-100;
     padding: 12px;
-    box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
+    // box-shadow: -5px 2px 12px 0px rgba(25, 25, 25, 0.1);
+    &:hover {
+      h2,
+      h3 {
+        color: $red-hover !important;
+      }
+    }
     .discussion-thumbnail {
       margin-left: 8px;
       img {
@@ -702,25 +764,20 @@ body {
       }
     }
     .discussion-thumbnail-title {
+      overflow: hidden;
       h3 {
         font-size: 15px;
         font-weight: 500;
-        line-height: 1;
         color: $gray-700;
-        &:hover {
-          color: $red-hover;
-          cursor: pointer;
-        }
       }
       h2 {
         font-size: 16px;
         font-weight: 700;
-        line-height: 1.34;
         color: $pure-black;
-        &:hover {
-          color: $red-hover;
-          cursor: pointer;
-        }
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
   }
@@ -732,6 +789,9 @@ body {
 // باکس تبلیغات ردیف دوم، بعد از ردیف هیرو
 .adv-box-side {
   margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .adv03-01,
   .adv03-02,
   .adv03-03,
@@ -739,12 +799,6 @@ body {
     margin-bottom: 10px;
   }
 }
-
-// .gold-box-group,
-// .money-box-group,
-// .convertor-box-group {
-//   height: 300px;
-// }
 
 // بردر تاپ و پدینگ سکشن‌ها
 .financial,
@@ -762,17 +816,31 @@ body {
     padding: 0 8px;
   }
 }
-
+.bg-and-border {
+  display: inline-block;
+  height: 100%;
+  background-color: $white-100;
+  border: 2px solid $white-100;
+}
+.li-thumbnail-bg {
+  height: 100%;
+  background: $white-100;
+  display: grid;
+}
 // استایل‌های سکشن پولی- مالی، بازار سرمایه، اقتصاد ورزش، توریسم و گردشگری
 .financial,
 .market,
 .sport-eco,
+.requirements,
 .tourism {
   .contents {
     margin-bottom: 22px;
   }
   .menu {
     .menu-items {
+      white-space: nowrap;
+      overflow: scroll;
+      width: 100%;
       a {
         display: inline-block;
         transition: transform 0.3s ease;
@@ -842,10 +910,7 @@ body {
   .content-col-banner-right,
   .content-col-banner-left {
     .background {
-      background-color: $white-100;
-      height: 20rem;
       overflow: hidden;
-
       img {
         transition: transform 0.5s ease;
         &:hover {
@@ -868,8 +933,7 @@ body {
 
   .content-col-li-thumbnail {
     .background {
-      background-color: $white-100;
-      height: 100%;
+      // background-color: $white-100;
       padding: 0 10px;
       margin-bottom: 0;
     }
@@ -890,6 +954,7 @@ body {
           }
           h2,
           h3 {
+            margin: 0;
             font-size: 16px;
             &:hover {
               color: $purpule-100;
@@ -929,35 +994,118 @@ body {
         overflow: hidden;
         text-overflow: ellipsis;
         border-bottom: 1px solid $gray-200;
-        line-height: 2.1;
-        // padding: 0px 12px;
+        padding: 4px 0 5px 0;
         &:last-child {
           border: none;
-        }
-        &::before {
-          font-family: FontAwesome;
-          display: inline-block;
-          content: "\f111";
-          font-size: 8px;
-          line-height: 1;
-          position: relative;
-          margin: 0 4px;
-          color: $purpule-100;
         }
         a:hover {
           color: $purpule-100 !important;
         }
       }
-    }
-    a {
-      font-size: 15px;
-      color: $pure-black !important;
+      a {
+        font-size: 15px;
+        color: $pure-black !important;
+        display: block;
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          // line-height: 1;
+          position: relative;
+          margin: 0 4px;
+          color: $purpule-100;
+        }
+      }
     }
   }
 }
 
 // رنگ‌های مجزای هر ردیف
 
+// پولی- مالی
+#row-financial {
+  .top-border {
+    height: 3px;
+    background-color: $purpule-100;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .topic,
+  .fa-align-justify,
+  .fa-chevron-left {
+    color: $purpule-100 !important;
+  }
+  .menu-items {
+    a:hover {
+      color: $purpule-100 !important;
+    }
+  }
+  .content-col-banner-right,
+  .content-col-banner-left {
+    .background {
+      p:hover {
+        color: $purpule-100 !important;
+      }
+    }
+  }
+  .content-col-li-thumbnail {
+    .title {
+      h2,
+      h3 {
+        font-size: 16px;
+        &:hover {
+          color: $purpule-100 !important;
+        }
+      }
+    }
+  }
+  .background {
+    li > a {
+      &:hover {
+        h2,
+        h3 {
+          color: $purpule-100 !important;
+        }
+      }
+    }
+  }
+  .content-col-li {
+    ul {
+      border-top: 3px solid $purpule-100 !important;
+      li {
+        a:hover {
+          color: $purpule-100 !important;
+        }
+      }
+      a {
+        font-size: 15px;
+        color: $pure-black !important;
+        display: block;
+        &::before {
+          font-family: FontAwesome;
+          display: inline-block;
+          content: "\f111";
+          font-size: 8px;
+          position: relative;
+          margin: 0 4px;
+          color: $purpule-100;
+        }
+      }
+    }
+  }
+
+  .content-col-li ul li {
+    &:hover {
+      border-color: $purpule-100 !important;
+    }
+  }
+  .topic {
+    :hover {
+      color: $purpule-100 !important;
+    }
+  }
+}
 // بازار سرمایه
 #row-market {
   .top-border {
@@ -995,22 +1143,36 @@ body {
       }
     }
   }
+  .background {
+    li > a {
+      &:hover {
+        h2,
+        h3 {
+          color: green !important;
+        }
+      }
+    }
+  }
   .content-col-li {
     ul {
       border-top: 3px solid $green-100 !important;
       li {
+        a:hover {
+          color: $green-100 !important;
+        }
+      }
+      a {
+        font-size: 15px;
+        color: $pure-black !important;
+        display: block;
         &::before {
           font-family: FontAwesome;
           display: inline-block;
           content: "\f111";
           font-size: 8px;
-          line-height: 1;
           position: relative;
           margin: 0 4px;
-          color: $green-100 !important;
-        }
-        a:hover {
-          color: $green-100 !important;
+          color: $green-100;
         }
       }
     }
@@ -1065,22 +1227,37 @@ body {
       }
     }
   }
+  .background {
+    li > a {
+      &:hover {
+        h2,
+        h3 {
+          color: $pink-100 !important;
+        }
+      }
+    }
+  }
   .content-col-li {
     ul {
       border-top: 3px solid $pink-100 !important;
       li {
+        a:hover {
+          color: $pink-100 !important;
+        }
+      }
+      a {
+        font-size: 15px;
+        color: $pure-black !important;
+        display: block;
         &::before {
           font-family: FontAwesome;
           display: inline-block;
           content: "\f111";
           font-size: 8px;
-          line-height: 1;
+          // line-height: 1;
           position: relative;
           margin: 0 4px;
-          color: $pink-100 !important;
-        }
-        a:hover {
-          color: $pink-100 !important;
+          color: $pink-100;
         }
       }
     }
@@ -1135,22 +1312,36 @@ body {
       }
     }
   }
+  .background {
+    li > a {
+      &:hover {
+        h2,
+        h3 {
+          color: $blue-200 !important;
+        }
+      }
+    }
+  }
   .content-col-li {
     ul {
       border-top: 3px solid $blue-200 !important;
       li {
+        a:hover {
+          color: $blue-200 !important;
+        }
+      }
+      a {
+        font-size: 15px;
+        color: $pure-black !important;
+        display: block;
         &::before {
           font-family: FontAwesome;
           display: inline-block;
           content: "\f111";
           font-size: 8px;
-          line-height: 1;
           position: relative;
           margin: 0 4px;
-          color: $blue-200 !important;
-        }
-        a:hover {
-          color: $blue-200 !important;
+          color: $blue-200;
         }
       }
     }
@@ -1168,8 +1359,54 @@ body {
   }
 }
 
+.map-iran {
+  svg {
+    width: 100%;
+  }
+
+  .province path {
+    fill: #ccc;
+  }
+  .sea path {
+    fill: #6caed8;
+  }
+  .island path {
+    fill: #fff;
+  }
+  .lake path {
+    fill: #6caed8;
+  }
+  .province path:hover,
+  #IranMap .map .island path:hover,
+  #IranMap .map .province path.hover,
+  #IranMap .map .island path.hover {
+    fill: #b71819 !important;
+    cursor: pointer;
+  }
+}
 // استان‌ها
 #row-provinces {
+  .content-col-li-thumbnail {
+    ul {
+      li {
+        border: none !important;
+      }
+    }
+    .background {
+      background: $gray-300 !important;
+      height: 100%;
+      display: grid;
+    }
+    .title {
+      h2,
+      h3 {
+        color: $white-100;
+        &:hover {
+          color: $orange-100;
+        }
+      }
+    }
+  }
   .content-col-banner-left {
     img {
       height: 100%;
@@ -1229,6 +1466,7 @@ body {
     }
     .adv-submit {
       background-color: $orange-100;
+      white-space: nowrap;
       .rss {
         a,
         i {
@@ -1269,6 +1507,9 @@ body {
       right: 0;
       background-image: linear-gradient(#fff0, black);
       padding: 8px 16px;
+      height: 35%;
+      width: 100%;
+      overflow: hidden;
     }
   }
 }
@@ -1278,6 +1519,53 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   font-size: 12px;
   .footer-search {
+    background-color: #232323;
+    .scroll-up {
+      padding-right: 16px;
+    }
+    a {
+      color: $white-100 !important;
+      padding: 8px 0;
+      i {
+        font-size: 20px !important;
+        padding: 0 18px;
+        border-left: 1px solid #777;
+      }
+    }
+    .magnifying-glass {
+      font-size: 16px !important;
+      color: $white-100;
+      background-color: #232323;
+    }
+  }
+  .navbar2 {
+    // background-color: $white-100 !important;
+    margin-left: 16px;
+    .search-box {
+      position: relative;
+      font-size: 20px;
+      width: 200px;
+      color: $white-100;
+      background-color: #232323;
+      border: none !important;
+    }
+  }
+  #weather-cities {
+    background: none;
+    border: none;
+    color: white;
+  }
+  .footer-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    form {
+      input {
+        text-align: end;
+        padding-left: 30px;
+      }
+    }
   }
   span {
     margin: 0 auto;
@@ -1288,7 +1576,9 @@ body {
   }
   ul {
     list-style: none;
-    line-height: 1.5rem;
+    li {
+      padding: 3px 0 5px 0;
+    }
   }
   .social {
     display: flex;
@@ -1314,6 +1604,15 @@ body {
     padding: 0 5rem;
     justify-content: center;
     white-space: nowrap;
+    ul {
+      padding: 0 !important;
+      li {
+        padding-right: 8px !important;
+        &:hover {
+          background-color: $red-hover;
+        }
+      }
+    }
   }
   a {
     color: white;
@@ -1338,8 +1637,104 @@ body {
 }
 
 //Media Queries
-// .hot-topics-box {
-//   @media only screen and (max-width: 990px) {
-//     height: 110px;
-//   }
-// }
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .btn-login {
+    margin-left: 35px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar-main-hover + div {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-main-hover {
+    .left-banner {
+      scale: 0.6;
+      position: absolute;
+      left: -70px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1399px) {
+  .hero-banner a img {
+    height: 400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-adv {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .variable-buttons {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #row-financial,
+  #row-market,
+  #row-sport-eco,
+  #row-tourism {
+    .content-col-banner-right,
+    .content-col-banner-left {
+      .background {
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .requirements {
+    .adv-submit {
+      display: none !important;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .card-discussion {
+    a.cards-bg {
+      height: 105px;
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .latest-news-ul {
+    height: 424px !important;
+  }
+  .hot-topics-box > ul {
+    height: 152px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 1200px) {
+  .container {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .adv-box-side a img {
+    display: inline-flex !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .content-col-li-thumbnail ul li {
+    padding: 0 !important;
+  }
+}
+// حذف شدن دو آیتم از لیست در سایز مدیوم
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .content-col-li ul li:nth-last-child(2) {
+    display: none;
+  }
+  .content-col-li ul li:nth-last-child(3) {
+    display: none;
+  }
+}
