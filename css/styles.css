@@ -734,7 +734,7 @@ td[data-table-var=name] .fi {
   overflow: hidden;
 }
 .card-discussion i {
-  margin-left: 7px;
+  margin-left: 4px;
 }
 
 .adv-box-side {
@@ -1053,6 +1053,16 @@ td[data-table-var=name] .fi {
   align-content: center;
   align-items: center;
   display: flex;
+}
+.financial .content-col-li-thumbnail h3,
+.market .content-col-li-thumbnail h3,
+.sport-eco .content-col-li-thumbnail h3,
+.requirements .content-col-li-thumbnail h3,
+.tourism .content-col-li-thumbnail h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .financial .content-col-li ul li:hover,
 .market .content-col-li ul li:hover,
@@ -1602,9 +1612,25 @@ td[data-table-var=name] .fi {
   color: #ffffff;
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
   .btn-login {
     margin-left: 35px;
+  }
+}
+@media only screen and (min-width: 100px) and (max-width: 767px) {
+  .btn-login {
+    padding: 0 !important;
+  }
+  .hero-banner {
+    height: 15rem;
+  }
+  .hero-banner a img {
+    object-fit: cover;
+    height: 232px !important;
+    width: 100% !important;
+  }
+  .hero-banner h3 {
+    font-size: 19px !important;
   }
 }
 @media only screen and (max-width: 991px) {
