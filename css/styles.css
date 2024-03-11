@@ -439,6 +439,7 @@ body a {
   font-size: 19px;
   font-weight: 900;
   overflow: scroll;
+  margin-top: 20px;
 }
 .slideshow-switch ul {
   list-style: none;
@@ -471,6 +472,10 @@ body a {
   background-color: #0040ad !important;
 }
 
+.adv-box-main a img {
+  margin-top: 8px;
+}
+
 td[data-table-var=name] .fi {
   margin-left: 5px;
   font-size: 15px;
@@ -480,13 +485,9 @@ td[data-table-var=name] .fi {
   margin-bottom: 22px;
 }
 
-.chart-gold-coin .table td tr:hover,
-.chart-money .table td tr:hover {
-  background-color: #fff0e5 !important;
-}
 .chart-gold-coin .table tr:hover,
 .chart-money .table tr:hover {
-  background-color: #fff0e5;
+  background-color: #fff0e5 !important;
 }
 .chart-gold-coin .bg-primary th,
 .chart-money .bg-primary th {
@@ -518,7 +519,7 @@ td[data-table-var=name] .fi {
 .chart-gold-coin .chart-title .more-info,
 .chart-money .chart-title .more-info {
   background-color: #e8e8e8;
-  padding: 2px 10px 5px;
+  padding: 2px 8px;
   font-size: 10px;
   color: #444444;
   font-family: "YekanWeb-Regular";
@@ -616,7 +617,7 @@ td[data-table-var=name] .fi {
   font-size: 10px;
   font-family: "YekanWeb-Regular";
   background-color: #e8e8e8;
-  padding: 1px 10px 3px;
+  padding: 2px 8px;
 }
 .convertor-box-group .convertor-box-title .more-info :hover {
   background-color: #666666 !important;
@@ -690,7 +691,7 @@ td[data-table-var=name] .fi {
   font-size: 10px;
   font-family: "YekanWeb-Regular";
   background-color: #e8e8e8;
-  padding: 1px 10px 3px;
+  padding: 2px 8px;
   color: #444444;
 }
 .card-discussion .cards-title .more-info:hover {
@@ -806,13 +807,6 @@ td[data-table-var=name] .fi {
 .tourism .menu .menu-items a {
   display: inline-block;
   transition: transform 0.3s ease;
-}
-.financial .menu .menu-items a:hover,
-.market .menu .menu-items a:hover,
-.sport-eco .menu .menu-items a:hover,
-.requirements .menu .menu-items a:hover,
-.tourism .menu .menu-items a:hover {
-  transform: translateX(-10px);
 }
 .financial .menu .menu-items .fa-align-justify,
 .market .menu .menu-items .fa-align-justify,
@@ -947,7 +941,7 @@ td[data-table-var=name] .fi {
 .requirements .content-col-banner-left .background p,
 .tourism .content-col-banner-right .background p,
 .tourism .content-col-banner-left .background p {
-  padding: 0 16px;
+  padding: 0 8px;
 }
 .financial .content-col-banner-right a,
 .financial .content-col-banner-left a,
@@ -989,6 +983,7 @@ td[data-table-var=name] .fi {
 .requirements .content-col-li-thumbnail ul,
 .tourism .content-col-li-thumbnail ul {
   list-style: none;
+  border: 1px solid #dedede !important;
 }
 .financial .content-col-li-thumbnail ul li:last-child,
 .market .content-col-li-thumbnail ul li:last-child,
@@ -1082,10 +1077,7 @@ td[data-table-var=name] .fi {
   margin: 0;
   height: 34rem;
   overflow: hidden;
-  border-top: 3px solid #483d8b;
-  border-bottom: 1px solid #dedede;
-  border-left: 1px solid #dedede;
-  border-right: 1px solid #dedede;
+  border: 1px solid #dedede !important;
   height: 100%;
 }
 .financial .content-col-li ul li,
@@ -1166,9 +1158,6 @@ td[data-table-var=name] .fi {
 #row-financial .background li > a:hover h3 {
   color: #483d8b !important;
 }
-#row-financial .content-col-li ul {
-  border-top: 3px solid #483d8b !important;
-}
 #row-financial .content-col-li ul li a:hover {
   color: #483d8b !important;
 }
@@ -1191,6 +1180,10 @@ td[data-table-var=name] .fi {
 }
 #row-financial .topic :hover {
   color: #483d8b !important;
+}
+#row-financial:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 #row-market .top-border {
@@ -1223,9 +1216,6 @@ td[data-table-var=name] .fi {
 #row-market .background li > a:hover h3 {
   color: green !important;
 }
-#row-market .content-col-li ul {
-  border-top: 3px solid #228b22 !important;
-}
 #row-market .content-col-li ul li a:hover {
   color: #228b22 !important;
 }
@@ -1248,6 +1238,10 @@ td[data-table-var=name] .fi {
 }
 #row-market .topic :hover {
   color: #228b22 !important;
+}
+#row-market:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 #row-sport-eco .top-border {
@@ -1280,9 +1274,6 @@ td[data-table-var=name] .fi {
 #row-sport-eco .background li > a:hover h3 {
   color: #c71583 !important;
 }
-#row-sport-eco .content-col-li ul {
-  border-top: 3px solid #c71583 !important;
-}
 #row-sport-eco .content-col-li ul li a:hover {
   color: #c71583 !important;
 }
@@ -1305,6 +1296,10 @@ td[data-table-var=name] .fi {
 }
 #row-sport-eco .topic :hover {
   color: #c71583 !important;
+}
+#row-sport-eco:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 #row-tourism .top-border {
@@ -1337,9 +1332,6 @@ td[data-table-var=name] .fi {
 #row-tourism .background li > a:hover h3 {
   color: #0040ad !important;
 }
-#row-tourism .content-col-li ul {
-  border-top: 3px solid #0040ad !important;
-}
 #row-tourism .content-col-li ul li a:hover {
   color: #0040ad !important;
 }
@@ -1362,6 +1354,10 @@ td[data-table-var=name] .fi {
 }
 #row-tourism .topic :hover {
   color: #0040ad !important;
+}
+#row-tourism:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 .map-iran svg {
@@ -1406,6 +1402,10 @@ td[data-table-var=name] .fi {
 #row-provinces .content-col-banner-left img {
   height: 100%;
 }
+#row-provinces:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
+}
 
 .requirements {
   margin: 15px auto 22px auto;
@@ -1419,9 +1419,6 @@ td[data-table-var=name] .fi {
 .requirements .menu .menu-items a {
   display: inline-block;
   transition: transform 0.3s ease;
-}
-.requirements .menu .menu-items a:hover {
-  transform: translateX(-10px);
 }
 .requirements .menu .menu-items .fa-align-justify {
   margin-left: 8px;
@@ -1483,6 +1480,7 @@ td[data-table-var=name] .fi {
 }
 .requirements .content-banner .background img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .requirements .content-banner a {
   position: absolute;
@@ -1494,6 +1492,10 @@ td[data-table-var=name] .fi {
   height: 35%;
   width: 100%;
   overflow: hidden;
+}
+.requirements:hover .menu-items {
+  transform: translateX(-10px);
+  transition: transform 0.3s ease-in-out;
 }
 
 .footer {
@@ -1565,7 +1567,8 @@ td[data-table-var=name] .fi {
   justify-content: center;
 }
 .footer .social a {
-  padding: 10px;
+  padding: 0 5px;
+  margin: 0 10px;
 }
 .footer .social ul {
   display: flex;
@@ -1574,9 +1577,26 @@ td[data-table-var=name] .fi {
   font-size: 20px;
 }
 .footer .social ul li i {
-  background-color: #00abff;
   padding: 10px;
   border-radius: 50%;
+}
+.footer .social .telegram {
+  background-color: #28a8e9;
+}
+.footer .social .twitter {
+  background-color: #1da1f2;
+}
+.footer .social .instagram {
+  background-color: #800af0;
+}
+.footer .social .facebook {
+  background-color: #106aff;
+}
+.footer .social .reddit {
+  background-color: #ff4d00;
+}
+.footer .social .linkedin {
+  background-color: #0077b5;
 }
 .footer .footer-list {
   padding: 0 5rem;
@@ -1717,6 +1737,11 @@ td[data-table-var=name] .fi {
     display: none;
   }
 }
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #fff0e5;
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1246px !important;
