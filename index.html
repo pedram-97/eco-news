@@ -90,44 +90,257 @@
         </div>
       </div>
       <!-- منو اصلی، ردیف دوم -->
-      <div class="navbar-main-hover">
+      <div class="navbar-main-hover position-relative">
         <div class="container d-flex justify-content-between">
           <nav class="navbar navbar-expand-sm navbar-light d-flex">
             <img src="footages/econews-main-banner.png" alt="" />
             <div class="collapse navbar-collapse m-2">
               <div class="navbar-nav d-none d-lg-flex">
-                <a
-                  class="nav-item nav-link"
-                  href="#"
-                  id="akhbar"
-                  onmouseover="mouseOverToggle()"
-                  onmouseout="mouseOutToggle()"
-                  id="new"
-                  class="child new"
-                >
-                  اخبارها و رویدادها
-                  <i class="fa-solid fa-caret-down"></i>
-                  <div id="newDropDown" class="new dropdown">
-                    <!-- <a href="#">First option</a> -->
-                    <div class="">
-                      <a href="">دسته بندی عمومی</a>
-                      <a href="">سیاست</a>
-                      <a href="">فرهنگ</a>
-                      <a href="">جامعه</a>
-                      <a href="">سلامت</a>
-                      <a href="">فناوری</a>
+                <div class="akhbar">
+                  <a class="nav-item nav-link" href="#">
+                    اخبارها و رویدادها
+                    <i class="fa-solid fa-caret-down"></i>
+                  </a>
+                  <div class="akhbar-dropdown container position-absolute top-100 z-3 start-0">
+                    <div class="col-md-4 topic-container">
+                      <div class="spacer">
+                        <div class="row m-0">
+                          <div class="col-12 dropdown-topic"><a href="">دسته بندی عمومی</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6"><a href="">سیاست</a></div>
+                          <div class="col-6"><a href="">فرهنگ</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">جامعه</a>
+                          </div>
+                          <div class="col-6"><a href="">سلامت</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 topic-container">
+                      <div class="spacer">
+                        <div class="row m-0">
+                          <div class="col-12 dropdown-topic"><a href="">دسته بندی عمومی</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6"><a href="">سیاست</a></div>
+                          <div class="col-6"><a href="">فرهنگ</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">جامعه</a>
+                          </div>
+                          <div class="col-6"><a href="">سلامت</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 topic-container">
+                      <div class="spacer">
+                        <div class="row m-0">
+                          <div class="col-12 dropdown-topic"><a href="">دسته بندی عمومی</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6"><a href="">سیاست</a></div>
+                          <div class="col-6"><a href="">فرهنگ</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">جامعه</a>
+                          </div>
+                          <div class="col-6"><a href="">سلامت</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <a href="">فناوری</a>
+                          </div>
+                          <div class="col-6"><a href="">فناوری</a></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </a>
+                </div>
+                <div class="nerkh">
+                  <a class="nav-item nav-link" href="#">
+                    نرخ‌ها و داده‌ها
+                    <i class="fa-solid fa-caret-down"></i>
+                  </a>
+                  <div class="nerkh-dropdown position-absolute top-100 z-3 container">
+                    <div class="w-100">
+                      <ul class="d-flex justify-content-between">
+                        <li>
+                          <a href="fa/market/category/ارزها"><i class="fa fa-chevron-left"></i> ارزها</a>
+                        </li>
+                        <li>
+                          <a href="fa/market/قیمت-طلا-و-سکه"><i class="fa fa-chevron-left"></i> قیمت طلا و سکه</a>
+                        </li>
+                        <li>
+                          <a href="fa/market/نفت-و-سوخت"><i class="fa fa-chevron-left"></i> نفت و سوخت</a>
+                        </li>
+                        <li>
+                          <a href="fa/market/فلزات-پایه"><i class="fa fa-chevron-left"></i> فلزات پایه</a>
+                        </li>
+                        <li>
+                          <a href="fa/market/کالاهای-جهانی"><i class="fa fa-chevron-left"></i> کالاهای جهانی</a>
+                        </li>
+                        <li>
+                          <a href="fa/market/stocks"><i class="fa fa-chevron-left"></i> بورس جهانی</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="ostan">
+                  <a class="nav-item nav-link" href="#">
+                    استان‌ها
+                    <i class="fa-solid fa-caret-down"></i>
+                  </a>
+                  <div class="ostan-dropdown position-absolute top-100 z-3 container">
+                    <div class="row-row container">
+                      <ul class="nav nav-pills">
+                        <li>
+                          <a href="http://azarbaijan-sharghi.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> آذربایجان شرقی</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://azarbaijan-gharbi.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> آذربایجان غربی</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://ardabil.econews.ir"><i class="fa fa-chevron-left"></i> اردبیل</a>
+                        </li>
+                        <li>
+                          <a href="http://isfahan.econews.ir"><i class="fa fa-chevron-left"></i> اصفهان</a>
+                        </li>
+                        <li>
+                          <a href="http://alborz.econews.ir"><i class="fa fa-chevron-left"></i> البرز</a>
+                        </li>
+                        <li>
+                          <a href="http://ilam.econews.ir"><i class="fa fa-chevron-left"></i> ایلام</a>
+                        </li>
+                        <li>
+                          <a href="http://boushehr.econews.ir"><i class="fa fa-chevron-left"></i> بوشهر</a>
+                        </li>
+                        <li>
+                          <a href="http://tehran.econews.ir"><i class="fa fa-chevron-left"></i> تهران</a>
+                        </li>
+                        <li>
+                          <a href="http://chaharmahalbakhtiari.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> چهارمحال و بختیاری</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://khorasan-jonoubi.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> خراسان جنوبی</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://khorasan-razavi.econews.ir"><i class="fa fa-chevron-left"></i> خراسان رضوی</a>
+                        </li>
+                        <li>
+                          <a href="http://khorasan-shomali.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> خراسان شمالی</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://khuzestan.econews.ir"><i class="fa fa-chevron-left"></i> خوزستان</a>
+                        </li>
+                        <li>
+                          <a href="http://zanjan.econews.ir"><i class="fa fa-chevron-left"></i> زنجان</a>
+                        </li>
+                        <li>
+                          <a href="http://semnan.econews.ir"><i class="fa fa-chevron-left"></i> سمنان</a>
+                        </li>
+                        <li>
+                          <a href="http://sistan-baluchestan.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> سیستان و بلوچستان</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://fars.econews.ir"><i class="fa fa-chevron-left"></i> فارس</a>
+                        </li>
+                        <li>
+                          <a href="http://gazvin.econews.ir"><i class="fa fa-chevron-left"></i> قزوین</a>
+                        </li>
+                        <li>
+                          <a href="http://qom.econews.ir"><i class="fa fa-chevron-left"></i> قم</a>
+                        </li>
+                        <li>
+                          <a href="http://kurdestan.econews.ir"><i class="fa fa-chevron-left"></i> کردستان</a>
+                        </li>
+                        <li>
+                          <a href="http://kerman.econews.ir"><i class="fa fa-chevron-left"></i> کرمان</a>
+                        </li>
+                        <li>
+                          <a href="http://kermanshah.econews.ir"><i class="fa fa-chevron-left"></i> کرمانشاه</a>
+                        </li>
+                        <li>
+                          <a href="http://kohgiluyeh-boyerahmad.econews.ir"
+                            ><i class="fa fa-chevron-left"></i> کهگیلویه و بویراحمد</a
+                          >
+                        </li>
+                        <li>
+                          <a href="http://golestan.econews.ir"><i class="fa fa-chevron-left"></i> گلستان</a>
+                        </li>
+                        <li>
+                          <a href="http://guilan.econews.ir"><i class="fa fa-chevron-left"></i> گیلان</a>
+                        </li>
+                        <li>
+                          <a href="http://lorestan.econews.ir"><i class="fa fa-chevron-left"></i> لرستان</a>
+                        </li>
+                        <li>
+                          <a href="http://mazandaran.econews.ir"><i class="fa fa-chevron-left"></i> مازندران</a>
+                        </li>
+                        <li>
+                          <a href="http://markazi.econews.ir"><i class="fa fa-chevron-left"></i> مرکزی</a>
+                        </li>
+                        <li>
+                          <a href="http://hormozgan.econews.ir"><i class="fa fa-chevron-left"></i> هرمزگان</a>
+                        </li>
+                        <li>
+                          <a href="http://hamedan.econews.ir"><i class="fa fa-chevron-left"></i> همدان</a>
+                        </li>
+                        <li>
+                          <a href="http://yazd.econews.ir"><i class="fa fa-chevron-left"></i> یزد</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-                <a class="nav-item nav-link" href="#" id="nerkh">
-                  نرخ‌ها و داده‌ها
-                  <i class="fa-solid fa-caret-down"></i>
-                </a>
-                <a class="nav-item nav-link" href="#" id="ostan">
-                  استان‌ها
-                  <i class="fa-solid fa-caret-down"></i>
-                </a>
                 <a class="nav-item nav-link" href="#" id="mantaghe-azad">
                   مناطق آزاد
                   <i class="fa-solid fa-caret-down"></i>
