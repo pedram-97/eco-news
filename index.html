@@ -97,7 +97,7 @@
             <div class="collapse navbar-collapse m-2">
               <div class="navbar-nav d-none d-lg-flex">
                 <div class="akhbar">
-                  <a class="nav-item nav-link" href="#">
+                  <a class="nav-item nav-link hover-menu-links" href="#">
                     اخبارها و رویدادها
                     <i class="fa-solid fa-caret-down"></i>
                   </a>
@@ -192,7 +192,7 @@
                   </div>
                 </div>
                 <div class="nerkh">
-                  <a class="nav-item nav-link" href="#">
+                  <a class="nav-item nav-link hover-menu-links" href="#">
                     نرخ‌ها و داده‌ها
                     <i class="fa-solid fa-caret-down"></i>
                   </a>
@@ -200,29 +200,41 @@
                     <div class="w-100">
                       <ul class="d-flex justify-content-between">
                         <li>
-                          <a href="fa/market/category/ارزها"><i class="fa fa-chevron-left"></i> ارزها</a>
+                          <a href="fa/market/category/ارزها" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> ارزها</a
+                          >
                         </li>
                         <li>
-                          <a href="fa/market/قیمت-طلا-و-سکه"><i class="fa fa-chevron-left"></i> قیمت طلا و سکه</a>
+                          <a href="fa/market/قیمت-طلا-و-سکه" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> قیمت طلا و سکه</a
+                          >
                         </li>
                         <li>
-                          <a href="fa/market/نفت-و-سوخت"><i class="fa fa-chevron-left"></i> نفت و سوخت</a>
+                          <a href="fa/market/نفت-و-سوخت" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> نفت و سوخت</a
+                          >
                         </li>
                         <li>
-                          <a href="fa/market/فلزات-پایه"><i class="fa fa-chevron-left"></i> فلزات پایه</a>
+                          <a href="fa/market/فلزات-پایه" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> فلزات پایه</a
+                          >
                         </li>
                         <li>
-                          <a href="fa/market/کالاهای-جهانی"><i class="fa fa-chevron-left"></i> کالاهای جهانی</a>
+                          <a href="fa/market/کالاهای-جهانی" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> کالاهای جهانی</a
+                          >
                         </li>
                         <li>
-                          <a href="fa/market/stocks"><i class="fa fa-chevron-left"></i> بورس جهانی</a>
+                          <a href="fa/market/stocks" class="nerkh-links"
+                            ><i class="fa fa-chevron-left"></i> بورس جهانی</a
+                          >
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="ostan">
-                  <a class="nav-item nav-link" href="#">
+                  <a class="nav-item nav-link hover-menu-links" href="#">
                     استان‌ها
                     <i class="fa-solid fa-caret-down"></i>
                   </a>
@@ -340,16 +352,15 @@
                     </div>
                   </div>
                 </div>
-
-                <a class="nav-item nav-link" href="#" id="mantaghe-azad">
+                <a class="nav-item nav-link hover-menu-links" href="#" id="mantaghe-azad">
                   مناطق آزاد
                   <i class="fa-solid fa-caret-down"></i>
                 </a>
-                <a class="nav-item nav-link" href="#" id="chandresane">
+                <a class="nav-item nav-link hover-menu-links" href="#" id="chandresane">
                   چندرسانه‌ای
                   <i class="fa-solid fa-caret-down"></i>
                 </a>
-                <a class="nav-item nav-link" href="#">نیازمندی‌ها</a>
+                <a class="nav-item nav-link hover-menu-links" href="#">نیازمندی‌ها</a>
               </div>
             </div>
           </nav>
@@ -357,7 +368,7 @@
         </div>
       </div>
       <!-- منو تیتر اخبار، ردیف سوم -->
-      <div class="navbar-topics">
+      <div class="navbar-topics position-relative">
         <div class="menu container navbar-expand-lg d-flex collapse navbar-collapse">
           <ul class="d-flex align-items-center m-0 p-0">
             <li>
@@ -366,8 +377,71 @@
             <li>
               <a class="nav-item nav-link tab-01" href="#">جهان</a>
             </li>
-            <li>
+            <li class="eco-title">
               <a class="nav-item nav-link tab-02" href="#">سازمان اکو | ECO</a>
+              <div class="eco-dropdown position-absolute top-100 z-3">
+                <div class="container">
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/سازمان-اکو-eco" target="_blank" class="home-icon"
+                      ><i class="fa-solid fa-house ml-8"></i>صفحه اصلی سازمان اکو | ECO</a
+                    >
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/ایران-eco-iran">
+                      <span class="fi fi-ir fis"></span>
+                      ایران | ECO IRAN
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/ترکیه-turkiye"> <span class="fi fi-tr fis"></span> ترکیه | Turkiye </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/آذربایجان-azerbaijan">
+                      <span class="fi fi-az fis"></span> آذربایجان| Azerbaijan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/ترکمنستان-turkmenistan">
+                      <span class="fi fi-tm fis"></span> ترکمنستان|Turkmenistan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/تاجیکستان-tajikistan">
+                      <span class="fi fi-tj fis"></span> تاجیکستان|Tajikistan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/قزاقستان-kazakhstan">
+                      <span class="fi fi-kz fis"></span> قزاقستان |Kazakhstan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/قرقیزستان-kyrgyzstan">
+                      <span class="fi fi-kg fis"></span> قرقیزستان |Kyrgyzstan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/ازبکستان-uzbekistan">
+                      <span class="fi fi-uz fis"></span> ازبکستان |Uzbekistan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/افغانستان-afghanistan">
+                      <span class="fi fi-af fis"></span> افغانستان |Afghanistan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/category/پاکستان-pakistan">
+                      <span class="fi fi-pk fis"></span> پاکستان | Pakistan
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2">
+                    <a href="fa/news/feed/787" target="_blank" class="rss-icon"
+                      ><i class="fa-solid fa-rss"></i>عناوین کل اخبار</a
+                    >
+                  </div>
+                </div>
+              </div>
             </li>
             <li>
               <a class="nav-item nav-link tab-03" href="#">کلان و بودجه</a>

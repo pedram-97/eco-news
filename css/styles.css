@@ -132,7 +132,6 @@ body a {
 .navbar-main-hover .navbar-nav a,
 .navbar-main-hover .navbar-nav i {
   display: flex;
-  height: 80px;
   align-items: center;
   color: #ffffff;
   font-weight: 700;
@@ -141,6 +140,9 @@ body a {
 .navbar-main-hover .navbar-nav i {
   margin-right: 3px;
   pointer-events: none;
+}
+.navbar-main-hover .hover-menu-links {
+  height: 80px;
 }
 
 .navbar-topics {
@@ -232,6 +234,7 @@ body a {
 }
 .hero .headlines span strong {
   margin-left: 5px;
+  cursor: pointer;
 }
 .hero .headlines > a {
   color: #333;
@@ -1695,16 +1698,17 @@ td[data-table-var=name] .fi {
 .nerkh-dropdown ul {
   list-style: none;
   display: flex;
-  padding: 0;
+  padding: 15px 0;
   margin: 0;
   align-items: center;
 }
 .nerkh-dropdown ul li {
   width: 100%;
+  margin: 4px 0;
 }
 .nerkh-dropdown ul li a {
   border-left: 1px solid #989898;
-  padding: 6px 10px 10px 10px;
+  padding: 10px;
 }
 .nerkh-dropdown ul li a i {
   font-size: 12px !important;
@@ -1712,7 +1716,7 @@ td[data-table-var=name] .fi {
   color: #bb0000 !important;
 }
 .nerkh-dropdown ul li:not(:last-child) a {
-  border-left: 1px solid #989898;
+  border-left: 1px solid #444444;
 }
 .nerkh-dropdown ul li:last-child a {
   border-left: none;
@@ -1726,6 +1730,9 @@ td[data-table-var=name] .fi {
   background-color: #92191f !important;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3) inset;
 }
+.ostan a:hover i {
+  color: #ffffff !important;
+}
 
 .ostan .ostan-dropdown {
   display: none;
@@ -1736,9 +1743,27 @@ td[data-table-var=name] .fi {
 .ostan .row-row {
   padding: 0;
 }
+.ostan .row-row ul {
+  padding: 15px 0;
+}
 .ostan .row-row ul li {
   width: 200px !important;
-  height: 35px !important;
+  border-left: 1px solid #444444;
+  margin: 3px 0;
+}
+.ostan .row-row ul li a {
+  font-size: 17px;
+  font-weight: 300;
+  padding: 6px 10px;
+}
+.ostan .row-row ul li a i {
+  font-size: 12px;
+  margin-left: 4px;
+  color: #b71818;
+}
+.ostan .row-row ul li,
+.ostan .row-row ul a {
+  height: 25px;
 }
 
 .ostan:hover .ostan-dropdown {
@@ -1747,9 +1772,39 @@ td[data-table-var=name] .fi {
 
 .eco-dropdown {
   display: none;
+  width: 100%;
+  right: 0;
+}
+.eco-dropdown .container {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  background: #d2d2d2;
+}
+.eco-dropdown .container .fi,
+.eco-dropdown .container i {
+  margin-left: 8px;
+  border-radius: 100%;
+}
+.eco-dropdown .container a {
+  color: #444444;
+  height: 24px !important;
+  margin: 15px 0;
+  justify-content: right !important;
+}
+.eco-dropdown .container a:hover {
+  color: #ffffff;
+  background-color: #dedede;
+}
+.eco-dropdown .container > div > a {
+  border-left: 1px solid #989898;
+  padding-left: 10px;
+}
+.eco-dropdown .container > div > a:nth-child(6n) {
+  border-left: none !important;
 }
 
-.eco-title:hover .eco-dropdown {
+.navbar-topics .eco-title:hover .eco-dropdown {
   display: flex;
 }
 

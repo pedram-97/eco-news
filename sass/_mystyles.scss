@@ -122,7 +122,7 @@ body {
     a,
     i {
       display: flex;
-      height: 80px;
+      // height: 80px;
       align-items: center;
       color: $white-100;
       font-weight: 700;
@@ -136,6 +136,9 @@ body {
       margin-right: 3px;
       pointer-events: none;
     }
+  }
+  .hover-menu-links {
+    height: 80px;
   }
 }
 
@@ -226,6 +229,7 @@ body {
       color: $orange-100;
       strong {
         margin-left: 5px;
+        cursor: pointer;
       }
     }
     > a {
@@ -1745,14 +1749,15 @@ td[data-table-var="name"] {
   ul {
     list-style: none;
     display: flex;
-    padding: 0;
+    padding: 15px 0;
     margin: 0;
     align-items: center;
     li {
       width: 100%;
+      margin: 4px 0;
       a {
         border-left: 1px solid $gray-400;
-        padding: 6px 10px 10px 10px;
+        padding: 10px;
         i {
           font-size: 12px !important;
           margin: 0 16px 0 8px !important;
@@ -1760,7 +1765,7 @@ td[data-table-var="name"] {
         }
       }
       &:not(:last-child) a {
-        border-left: 1px solid $gray-400;
+        border-left: 1px solid $gray-500;
       }
     }
     li:last-child a {
@@ -1781,6 +1786,9 @@ td[data-table-var="name"] {
   &:hover {
     background-color: $red-200 !important;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3) inset;
+    i {
+      color: $white-100 !important;
+    }
   }
 }
 .ostan {
@@ -1792,9 +1800,27 @@ td[data-table-var="name"] {
   }
   .row-row {
     padding: 0;
-    ul li {
-      width: 200px !important;
-      height: 35px !important;
+    ul {
+      padding: 15px 0;
+      li {
+        width: 200px !important;
+        border-left: 1px solid $gray-500;
+        margin: 3px 0;
+        a {
+          font-size: 17px;
+          font-weight: 300;
+          padding: 6px 10px;
+          i {
+            font-size: 12px;
+            margin-left: 4px;
+            color: $red-hover;
+          }
+        }
+      }
+      li,
+      a {
+        height: 25px;
+      }
     }
   }
 }
@@ -1806,16 +1832,49 @@ td[data-table-var="name"] {
   }
 }
 
+// سازمان اکو
 .eco-dropdown {
   display: none;
+  width: 100%;
+  right: 0;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    background: $menu-gray;
+    .fi,
+    i {
+      margin-left: 8px;
+      border-radius: 100%;
+    }
+    a {
+      color: $gray-500;
+      height: 24px !important;
+      margin: 15px 0;
+      justify-content: right !important;
+      &:hover {
+        color: $white-100;
+        background-color: $gray-200;
+      }
+    }
+  }
+  .container > div > a {
+    border-left: 1px solid $gray-400;
+    padding-left: 10px;
+  }
+
+  .container > div > a:nth-child(6n) {
+    border-left: none !important;
+  }
 }
-.eco-title {
+.navbar-topics .eco-title {
   &:hover {
     .eco-dropdown {
       display: flex;
     }
   }
 }
+
 //Media Queries
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
